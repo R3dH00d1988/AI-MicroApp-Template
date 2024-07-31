@@ -15,26 +15,26 @@ load_dotenv()
 
 # Define templates
 
- templates = {"Case Study: Ebola": "config_ebola_case_study", "Demo 1": "config_demo1", "Demo 2": "config_demo2", "ai_assessment": "config", "MCQ Generator": "config_mcq_generator", "Debate an AI": "config_debate", "mSCT Tutor": "config_msct_tutor", "Find the Incorrect Fact": "config_incorrect_fact", "Alt Text Generator": "config_alt_text", "SOAP Notes Scoring": "config_soap", "Question Feedback Generator": "config_question_feedback", "Learning Obective Generator": "config_lo_generator", "Image Quiz": "config_image_quiz", "Zodiac Symbol": "config_zodiac"}
+templates = {"Case Study: Ebola": "config_ebola_case_study", "Demo 1": "config_demo1", "Demo 2": "config_demo2", "ai_assessment": "config", "MCQ Generator": "config_mcq_generator", "Debate an AI": "config_debate", "mSCT Tutor": "config_msct_tutor", "Find the Incorrect Fact": "config_incorrect_fact", "Alt Text Generator": "config_alt_text", "SOAP Notes Scoring": "config_soap", "Question Feedback Generator": "config_question_feedback", "Learning Obective Generator": "config_lo_generator", "Image Quiz": "config_image_quiz", "Zodiac Symbol": "config_zodiac"}
 
- selected_template = st.sidebar.selectbox("Select template", templates.keys())
+selected_template = st.sidebar.selectbox("Select template", templates.keys())
 
- if "template" not in st.session_state or st.session_state.template != selected_template:
-     st.session_state.template = selected_template
-     st.query_params["template"] = selected_template
+if "template" not in st.session_state or st.session_state.template != selected_template:
+    st.session_state.template = selected_template
+    st.query_params["template"] = selected_template
 # Clear all session state variables
-     keys_to_keep = ['template']  # Add any other keys you want to preserve
-     for key in list(st.session_state.keys()):
-         if key not in keys_to_keep:
-             del st.session_state[key]
-     st.session_state['additional_prompt'] = ""
-     st.session_state['chat_history'] = []
-     st.session_state['CURRENT_PHASE'] = 0
-     st.session_state['TOTAL_PRICE'] = 0
+    keys_to_keep = ['template']  # Add any other keys you want to preserve
+    for key in list(st.session_state.keys()):
+        if key not in keys_to_keep:
+            del st.session_state[key]
+    st.session_state['additional_prompt'] = ""
+    st.session_state['chat_history'] = []
+    st.session_state['CURRENT_PHASE'] = 0
+    st.session_state['TOTAL_PRICE'] = 0
 
-     st.rerun()
+    st.rerun()
 
- config_file = templates[selected_template]
+config_file = templates[selected_template]
 print(templates[selected_template]
 if config_file:
     config_module = importlib.import_module(config_file)
