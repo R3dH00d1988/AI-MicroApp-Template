@@ -37,7 +37,7 @@ load_dotenv()
 
 # config_file = templates[selected_template]
 
-config_file = config_zodiac
+config_file = config_zodiac.py
 
 if config_file:
     config_module = importlib.import_module(config_file)
