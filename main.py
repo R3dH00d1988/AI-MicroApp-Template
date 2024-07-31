@@ -35,7 +35,7 @@ if "template" not in st.session_state or st.session_state.template != selected_t
     st.rerun()
 
 config_file = templates[selected_template]
-print(templates[selected_template])
+
 if config_file:
     config_module = importlib.import_module(config_file)
     for attr in dir(config_module):
