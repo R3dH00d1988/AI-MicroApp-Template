@@ -37,7 +37,7 @@ if "template" not in st.session_state or st.session_state.template != selected_t
 
 config_file = templates[selected_template]
 '''
-config_file = templates config_zodiac
+config_file = config_zodiac
 
 if config_file:
     config_module = importlib.import_module(config_file)
