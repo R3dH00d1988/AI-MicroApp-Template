@@ -1,6 +1,5 @@
 APP_TITLE = "Augmented Reading Response Analysis"
-APP_INTRO = """This is a simple app that assesses the user's understanding of the article they have read. 
-"""
+APP_INTRO = """This is a simple app that assesses the user's understanding of the article they have read. """
 
 APP_HOW_IT_WORKS = """
  This is an **AI-Tutored Rubric exercise** that acts as a tutor guiding a student through a shared asset, like an article. It uses the OpenAI Assistants API with GPT-4. The **questions and rubric** are defined by a **faculty**. The **feedback and the score** are generarated by the **AI**. 
@@ -36,12 +35,12 @@ PHASES = {
             "about": {
                 "type": "text_area",
                 "height": 200,
-                "label": """What are the key ideas of this article?""",
+                "label": """Please list three to five key ideas you found in this reading.""",
                 "value": "",
             }
 
         },
-        "phase_instructions": "The user will offer 3 to 5 key ideas from the article. Please critically review their response for accuracy. Please offer friendly feedback if that suggest ideas that do not appear in the article.",
+        "phase_instructions": "The user will offer 3 to 5 key ideas from the article. Please critically review their response for accuracy. Please offer friendly feedback if that suggest ideas that do not appear in the article. Begin your feedback with a very brief summary of the article.",
         "user_prompt": "{about}",
         "ai_response": True,
         "scored_phase": False,
@@ -57,11 +56,11 @@ PHASES = {
             "reflection": {
                 "type": "text_area",
                 "height": 300,
-                "label": "How has this article changed your understanding of the cyberpunk genre?",
+                "label": "Please write a short paragraph explaining how your understanding of the cyberpunk genre has changed as a result of reading this article.",
                 "value":"",
             }
         },
-        "phase_instructions": "The user reflect upon what they learned by reading the article. Critically evaluate their response to determine if they understand and have made a valid attempt to answer the question. If so, be supportive of their answer and their work on this exercise.",
+        "phase_instructions": "The user reflect upon what they learned by reading the article. Critically evaluate their response to determine if they understand and have made a valid attempt to answer the question. If so, be supportive of their answer and their work on this exercise. If they say they didn't learn anything, ask them what would have been more helpful?",
         "user_prompt": "{reflection}",
         "ai_response": True,
         "scored_phase": False,
