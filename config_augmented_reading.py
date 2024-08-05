@@ -2,20 +2,18 @@ APP_TITLE = "Augmented Reading Response Analysis"
 APP_INTRO = """This is a simple app that assesses the user's understanding of the article they have read. """
 
 APP_HOW_IT_WORKS = """
- This is an **AI-Tutored Rubric exercise** that acts as a tutor guiding a student through a shared asset, like an article. It uses the OpenAI Assistants API with GPT-4. The **questions and rubric** are defined by a **faculty**. The **feedback and the score** are generarated by the **AI**. 
+ This is an **AI-Tutored reading reflection** that acts as a tutor guiding a student through a shared reading. It uses the OpenAI Assistants API with GPT-4. The **questions ** are defined by a **faculty**. The **feedback** is generarated by the **AI**. 
 
 It can:
 
-1. provide feedback on a student's answers to questions about an asset
-2. roughly "score" a student to determine if they can move on to the next section.  
+1. provide feedback on a student's summary of the reading; and
+2. provide feedback on a student's reflection about what they learned through that reading.
 
-Scoring is based on a faculty-defined rubric on the backend. These rubrics can be simple (i.e. "full points if the student gives a thoughtful answer") or specific with different criteria and point thresholds. The faculty also defines a minimum pass threshold for each question. The threshold could be as low as zero points to pass any answer, or it could be higher. 
+Using AI to provide feedback like this, even with such a low-risk activity, is a very experimental process. Some things to note: 
 
-Using AI to provide feedback and score like this is a very experimental process. Some things to note: 
-
- - AIs make mistakes. Users are encourage to skip a question if the AI is not understanding them or giving good feedback. 
- - The AI might say things that it can't do, like "Ask me anything about the article". I presume further refinement can reduce these kinds of responses. 
- - Scoring is highly experimental. At this point, it should mainly be used to gauge if a user gave an approximately close answer to what the rubric suggests. It is not recommended to show the user the numeric score. 
+ - AIs make mistakes. Sharing the results with your instructor or a tutor might be a good way to start a discussion.
+ - The AI might say things that it can't do, like "Ask me anything about the article".
+ - This is not scored, and the submissions and responses are not stored anywhere.
  """
 
 SHARED_ASSET = {
