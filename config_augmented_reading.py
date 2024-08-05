@@ -22,8 +22,8 @@ SHARED_ASSET = {
 }
 
 HTML_BUTTON = {
-    "url": "https://curricume-uploads.s3.amazonaws.com/cdc_ebola_poster.pdf",
-    "button_text":"Read PDF"
+    "url": "",
+    "button_text":""
 }
 
 SYSTEM_PROMPT = """You are providing feedback the key ideas of the article 'The Aesthetics of Cyberpunk' by Inge Eriksen. """
@@ -35,12 +35,12 @@ PHASES = {
             "about": {
                 "type": "text_area",
                 "height": 200,
-                "label": """Please list three to five key ideas you found in this reading.""",
+                "label": """Please list three to five key ideas you found in this reading. Be thorough with each: use full sentences with specific details.""",
                 "value": "",
             }
 
         },
-        "phase_instructions": "The user will offer 3 to 5 key ideas from the article. Please critically review their response for accuracy. Please offer friendly feedback if that suggest ideas that do not appear in the article. Begin your feedback with a very brief summary of the article.",
+        "phase_instructions": "The user will offer 3 to 5 key ideas from the article. Please critically review their response for accuracy. Please offer friendly but directed feedback if they suggest ideas that do not appear in the article or if they ignore important ideas. Begin your feedback with a very brief summary of the article.",
         "user_prompt": "{about}",
         "ai_response": True,
         "scored_phase": False,
@@ -60,7 +60,7 @@ PHASES = {
                 "value":"",
             }
         },
-        "phase_instructions": "The user reflect upon what they learned by reading the article. Critically evaluate their response to determine if they understand and have made a valid attempt to answer the question. If so, be supportive of their answer and their work on this exercise. If they say they didn't learn anything, ask them what would have been more helpful?",
+        "phase_instructions": "The user will reflect upon what they learned by reading the article. Critically evaluate their response to determine if they did learn something and have made a valid attempt to answer the question. If so, be supportive of their answer and their work on this exercise. If they say they didn't learn anything, suggest some things they may want to review in the article.",
         "user_prompt": "{reflection}",
         "ai_response": True,
         "scored_phase": False,
