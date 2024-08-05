@@ -34,7 +34,9 @@ if "template" not in st.session_state or st.session_state.template != selected_t
 
     st.rerun()
 
-config_file = templates[selected_template]
+# config_file = templates[selected_template]
+# Manually set the config_file variable
+config_file = "config_zodiac"  # You can change this to any other template key
 
 if config_file:
     config_module = importlib.import_module(config_file)
