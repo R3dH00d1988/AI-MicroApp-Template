@@ -12,6 +12,8 @@ import base64
 
 load_dotenv()
 
+st.set_page_config(initial_sidebar_state="collapsed")
+
 # Define templates
 
 templates = {"Augmented Reading Reflection": "config_augmented_reading", "Zodiac Symbol": "config_zodiac", "Case Study: Ebola": "config_ebola_case_study", "Demo 1": "config_demo1", "Demo 2": "config_demo2", "ai_assessment": "config", "MCQ Generator": "config_mcq_generator", "Debate an AI": "config_debate", "mSCT Tutor": "config_msct_tutor", "Find the Incorrect Fact": "config_incorrect_fact", "Alt Text Generator": "config_alt_text", "SOAP Notes Scoring": "config_soap", "Question Feedback Generator": "config_question_feedback", "Learning Obective Generator": "config_lo_generator", "Image Quiz": "config_image_quiz"}
